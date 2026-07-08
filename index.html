@@ -1,11 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestell App</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</body>
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
+    
+    <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
+    <script src="./script.js" defer></script>
+
+    <title>Bestell App</title>
+  </head>
+  <body onload="init()">
+    <header>
+      <img
+        class="header_icon"
+        src="./assets/icons/SVG/header_icon.svg"
+        alt="Bestell App Icon"
+      />
+      <img
+        class="header_burger_menu_icon"
+        src="./assets/icons/SVG/burger_menu_icon.svg"
+        alt="Burger Menü Icon"
+      />
+    </header>
+    <div>
+      <img
+        class="hero-image"
+        src="./assets/images/PNG/hero_image.png"
+        alt="BurgerHouse Big Picture"
+      />
+    </div>
+    <img
+      class="burger_house_brand_icon"
+      src="./assets/images/PNG/burger_hero_icon.png"
+      alt="BurgerHouse Brand Icon"
+    />
+    <section class="headline_section">
+      <div class="headline_section_h1_and_review_div">
+        <h1><span>Burger</span>House</h1>
+        <img
+          src="./assets/images/SVG/review.svg"
+          alt="Reviews Template Image"
+        />
+      </div>
+      <p class="headline_section_p_tag">
+        The best of Burgers, Pizza, and Greens, all in one great place.
+      </p>
+    </section>
+    <main>
+      <section class="burger_and_sandwiches_section">
+        <header>
+          <img
+            src="./assets/icons/SVG/burger_and_sandwiches_section_header_icon.svg"
+            alt="burger and sandwiches section header icon"
+          />
+          <p>Burger & Sandwiches</p>
+        </header>
+        <div class="food_content" id="BurgerAndSandwichesContentId"></div>
+      </section>
+      <section></section>
+      <section></section>
+    </main>
+  </body>
 </html>

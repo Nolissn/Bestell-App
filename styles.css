@@ -1,0 +1,77 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary_color);
+  height: 128px;
+}
+
+.hero-image {
+  height: 508px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.headline_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 87px;
+}
+
+.headline_section_h1_and_review_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 75px;
+}
+
+h1{
+    font-family: "Palanquin Dark";
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--grey_tone);
+    margin-bottom: 20px;
+    margin-right: 32px
+}
+
+h1 span{
+    color: var(--primary_color);
+}
+
+.headline_section img{
+    width: 110px;
+    height: 32px;
+}
+
+.headline_section_p_tag{
+    font-family: "Palanquin";
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--grey_tone);
+}
+
+.burger_and_sandwiches_section header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 60px;
+    margin-top: 52px
+}
+
+.burger_and_sandwiches_section img{
+    height: 91px;
+    width: 88px;
+    margin-left: 167px;
+    margin-right: 28px
+}
+
+.burger_and_sandwiches_section p{
+    font-family: "Palanquin";
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 2px;
+}

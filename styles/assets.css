@@ -1,0 +1,96 @@
+.header_icon {
+  width: 92.56px;
+  height: 38px;
+  margin-left: 119px;
+}
+
+.header_burger_menu_icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 40px;
+}
+
+.burger_house_brand_icon {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-width: 13px;
+  border-style: solid;
+  border-color: #FDEADC;
+}
+
+.food_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px 167px;
+}
+
+.food_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 480px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.food_content .food_card_image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.food_card_text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.food_card_name {
+  font-family: "Palanquin";
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--grey_tone);
+}
+
+.food_card_description {
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--grey_tone);
+}
+
+.food_card_price {
+  font-family: "Palanquin";
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary_color);
+}
+
+.food_card_add_button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary_color);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.food_card_add_button:hover {
+  opacity: 0.85;
+}
