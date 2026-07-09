@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/fonts.css" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
-    
+
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="./script.js" defer></script>
@@ -29,18 +29,18 @@
         alt="Burger Menü Icon"
       />
     </header>
-    <div>
+    <div class="hero_image_container">
       <img
         class="hero-image"
         src="./assets/images/PNG/hero_image.png"
         alt="BurgerHouse Big Picture"
       />
+      <img
+        class="burger_house_brand_icon"
+        src="./assets/images/PNG/burger_hero_icon.png"
+        alt="BurgerHouse Brand Icon"
+      />
     </div>
-    <img
-      class="burger_house_brand_icon"
-      src="./assets/images/PNG/burger_hero_icon.png"
-      alt="BurgerHouse Brand Icon"
-    />
     <section class="headline_section">
       <div class="headline_section_h1_and_review_div">
         <h1><span>Burger</span>House</h1>
@@ -57,10 +57,13 @@
       <section class="burger_and_sandwiches_section">
         <header>
           <img
+            class="burger_and_sandwiches_section_header_icon"
             src="./assets/icons/SVG/burger_and_sandwiches_section_header_icon.svg"
             alt="burger and sandwiches section header icon"
           />
-          <p>Burger & Sandwiches</p>
+          <p class="burger_and_sandwiches_section_headline">
+            Burger & Sandwiches
+          </p>
         </header>
         <div class="food_content" id="BurgerAndSandwichesContentId"></div>
       </section>

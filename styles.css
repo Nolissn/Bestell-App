@@ -7,6 +7,10 @@ header {
   height: 128px;
 }
 
+.hero_image_container{
+    position: relative;
+}
+
 .hero-image {
   height: 508px;
   width: 100%;
@@ -61,14 +65,14 @@ h1 span{
     margin-top: 52px
 }
 
-.burger_and_sandwiches_section img{
+.burger_and_sandwiches_section_header_icon{
     height: 91px;
     width: 88px;
     margin-left: 167px;
     margin-right: 28px
 }
 
-.burger_and_sandwiches_section p{
+.burger_and_sandwiches_section_headline{
     font-family: "Palanquin";
     font-weight: 700;
     font-size: 40px;
