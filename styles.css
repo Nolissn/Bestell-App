@@ -7,8 +7,8 @@ header {
   height: 128px;
 }
 
-.hero_image_container{
-    position: relative;
+.hero_image_container {
+  position: relative;
 }
 
 .hero-image {
@@ -17,65 +17,141 @@ header {
   object-fit: cover;
 }
 
-.headline_section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 87px;
+.headline_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 87px;
 }
 
-.headline_section_h1_and_review_div{
+.headline_section_h1_and_review_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 75px;
+}
+
+h1 {
+  font-family: "Palanquin Dark";
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--grey_tone);
+  margin-bottom: 20px;
+  margin-right: 32px;
+}
+
+h1 span {
+  color: var(--primary_color);
+}
+
+.headline_section img {
+  width: 110px;
+  height: 32px;
+}
+
+.headline_section_p_tag {
+  font-family: "Palanquin";
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--grey_tone);
+}
+
+.burger_and_sandwiches_section header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 60px;
+  margin-top: 52px;
+}
+
+.burger_and_sandwiches_section_header_icon {
+  height: 91px;
+  width: 88px;
+  margin-left: 168px;
+  margin-right: 28px;
+}
+
+.food_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0px;
+  margin-top: 26px;
+  margin-left: 120px;
+}
+
+.section_headline {
+  font-family: "Palanquin";
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.pizza_section header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 61px;
+}
+
+.pizza_section_header_icon {
+  height: 91px;
+  width: 81px;
+  margin-left: 168px;
+  margin-right: 35px;
+}
+
+.pizza_section_header_extra_text {
+  font-family: Palanquin;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+
+.salad_section header {
+  height: 60px;
+  margin-top: 114px;
+  margin-bottom: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.salad_section_header_icon {
+  width: 89px;
+  height: 91px;
+  margin-left: 168px;
+  margin-right: 27px;
+}
+
+footer {
+  height: 128px;
+  background-color: var(--primary_color);
+  margin-top: 123px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  font-family: Palanquin;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+
+.footer_copyright_icon_and_text_wrapper_div {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    height: 75px;
+    gap: 4px;
 }
 
-h1{
-    font-family: "Palanquin Dark";
-    font-size: 48px;
-    font-weight: bold;
-    color: var(--grey_tone);
-    margin-bottom: 20px;
-    margin-right: 32px
-}
-
-h1 span{
-    color: var(--primary_color);
-}
-
-.headline_section img{
-    width: 110px;
-    height: 32px;
-}
-
-.headline_section_p_tag{
-    font-family: "Palanquin";
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--grey_tone);
-}
-
-.burger_and_sandwiches_section header{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 60px;
-    margin-top: 52px
-}
-
-.burger_and_sandwiches_section_header_icon{
-    height: 91px;
-    width: 88px;
-    margin-left: 167px;
-    margin-right: 28px
-}
-
-.burger_and_sandwiches_section_headline{
-    font-family: "Palanquin";
-    font-weight: 700;
-    font-size: 40px;
-    color: white;
-    margin-bottom: 2px;
+.footer_copyright_icon {
+  height: 24px;
+  width: 24px;
 }

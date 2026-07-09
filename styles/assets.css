@@ -23,15 +23,6 @@
   border-color: #fdeadc;
 }
 
-.food_content {
-  display: flex;
-  flex-direction: column;
-  gap:16px 0px;
-  margin-top: 26px;
-  margin-left: 120px;
-  margin-bottom: 45px;
-}
-
 .food_card {
   display: flex;
   flex-direction: row;
