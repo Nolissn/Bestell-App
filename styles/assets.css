@@ -85,3 +85,11 @@
   font-size: 16px;
   color: var(--grey_tone);
 }
+
+.basket{
+  width: 435px;
+  height: 794px;
+  background-color: var(--grey_tone);
+  position: sticky;
+  top: 200px;
+}
