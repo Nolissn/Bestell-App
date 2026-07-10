@@ -90,6 +90,10 @@
   width: 435px;
   height: 794px;
   background-color: var(--grey_tone);
+  border-radius: 25px 0px 0px 25px;
   position: sticky;
   top: 200px;
+  margin-top: 52px;
+  margin-bottom: -846px;
+  margin-left: auto;
 }
