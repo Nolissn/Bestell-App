@@ -1,4 +1,4 @@
-function getFoodCardsTemplate(food) {
+function getFoodCardsTemplate(food , i, category) {
   return `
     <div class="food_card">
       <img class="food_card_image" src="${food.image}" alt="${food.name}"/>
@@ -8,7 +8,7 @@ function getFoodCardsTemplate(food) {
       </div>
       <div class="food_card_price_and_button_layout_div">
       <span class="food_card_price">${food.price}</span>
-      <button class="food_card_button" onclick="addToBasket()">
+      <button class="food_card_button" onclick="addToBasket(${i}, '${category}')">
         Add to basket
       </button>
       </div>
