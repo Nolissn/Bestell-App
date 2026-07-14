@@ -41,5 +41,4 @@ function addToBasket(i, category)
 {
   console.log(i+" "+category);
   
-
 }
