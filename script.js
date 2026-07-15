@@ -75,6 +75,33 @@ function addToBasket(i, category) {
   reRenderFoodCardButtons();
 }
 
+function removeAllSelectedItems(index) {
+  let allItems = [];
+  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+
+  allItems[index].amount = 0;
+  renderBasket();
+  reRenderFoodCardButtons();
+}
+
+function decreaseAmount(index) {
+  let allItems = [];
+  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+
+  allItems[index].amount--;
+  renderBasket();
+  reRenderFoodCardButtons();
+}
+
+function increaseAmount(index) {
+  let allItems = [];
+  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+
+  allItems[index].amount++;
+  renderBasket();
+  reRenderFoodCardButtons();
+}
+
 function checkIfBasketEmpty() {
   let allItems = [];
   allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];

@@ -6,9 +6,13 @@ function renderFullBasketCards() {
   allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
 
   for (let index = 0; index < allItems.length; index++) {
-    if(allItems[index].amount !== 0){
-       box.innerHTML += getBasketCardTemplate(index, allItems);
+    if(allItems[index].amount > 1){
+       box.innerHTML += getMultipleBasketCardTemplate(index, allItems);
     }
+    else if(allItems[index].amount === 1)
+      {
+        box.innerHTML += getSingleBasketCardTemplate(index, allItems);
+      }
   }
 }
 

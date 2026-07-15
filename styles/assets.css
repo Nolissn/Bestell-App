@@ -79,6 +79,7 @@
   height: 30px;
   border-radius: 16px;
   border: none;
+  cursor: pointer;
   text-align: center;
   font-family: "Palanquin";
   font-weight: 600;
@@ -91,19 +92,27 @@
 }
 
 .food_card_button_empty:hover,
-.food_card_button_not_empty:hover {
-  color: var(--primary_color);
+.food_card_button_not_empty:hover,
+.basket_buy_button:hover {
   transform: translateY(-2px);
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.08),
     8px 12px 20px rgba(0, 0, 0, 0.18);
 }
 
+.food_card_button_empty:hover,
+.food_card_button_not_empty:hover {
+  color: var(--primary_color);
+}
+
 .food_card_button_not_empty {
-  width: 74px;
+  min-width: 74px;
   height: 30px;
+  padding: 0 10px;
+  white-space: nowrap;
   border-radius: 16px;
   border: none;
+  cursor: pointer;
   text-align: center;
   font-family: "Palanquin";
   font-weight: 600;
@@ -223,10 +232,21 @@
   line-height: 1.2;
 }
 
-.basket_card_footer_count_control_area img {
+.delete_food_card_icon_button {
   width: 24px;
   height: 24px;
   color: var(--grey_tone);
+  cursor: pointer;
+}
+
+.delete_food_card_icon_button:hover{
+  background-color: white;
+  border-radius: 8px;
+  color: var(--primary_color);
+}
+
+.delete_food_card_icon_button_multiple_margin {
+  margin-top: 20px;
 }
 
 .basket_card_footer_count_control_area span {
@@ -234,6 +254,22 @@
   font-weight: 600;
   font-size: 24px;
   color: var(--grey_tone);
+}
+
+.basket_card_footer_count_control_area span:not(.basket_card_amount) {
+  cursor: pointer;
+}
+
+.basket_card_amount {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.multiple_basket_card_top_div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 .total_dishes_price {
@@ -307,4 +343,8 @@ hr {
   font-weight: 700;
   font-size: 32px;
   border: none;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
