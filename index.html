@@ -28,6 +28,7 @@
 
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
+    <script src="./scripts/basket.js"></script>
     <script src="./script.js" defer></script>
 
     <title>Bestell App</title>
@@ -69,15 +70,7 @@
         The best of Burgers, Pizza, and Greens, all in one great place.
       </p>
     </section>
-    <aside class="basket">
-      <p class="basket_title">Your Basket</p>
-      <p class="empty_basket_text">
-        Nothing here yet.
-      </p>
-      <p class="empty_basket_text">Go ahead and choose something</p>
-      <p class="empty_basket_text">delicious!</p>
-      <img class="empty_basket_shopping_cart_icon" src="./assets/icons/SVG/shopping_cart_icon.svg" alt="Shopping cart icon">
-    </aside>
+    <aside class="basket" id="basketContentId"></aside>
     <main>
       <section class="burger_and_sandwiches_section">
         <header>
@@ -88,7 +81,7 @@
           />
           <p class="section_headline">Burger & Sandwiches</p>
         </header>
-        <div class="food_content" id="BurgerAndSandwichesContentId"></div>
+        <div class="food_content" id="burgerAndSandwichesContentId"></div>
       </section>
       <section class="pizza_section">
         <header>
@@ -101,7 +94,7 @@
             <span class="section_headline">Pizza</span> (30cm)
           </p>
         </header>
-        <div class="food_content" id="PizzaContentId"></div>
+        <div class="food_content" id="pizzaContentId"></div>
       </section>
       <section class="salad_section">
         <header>
@@ -112,7 +105,7 @@
           />
           <p class="section_headline">Salad</p>
         </header>
-        <div class="food_content" id="SaladContentId"></div>
+        <div class="food_content" id="saladContentId"></div>
       </section>
     </main>
     <footer>

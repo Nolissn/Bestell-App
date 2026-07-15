@@ -1,13 +1,14 @@
 function init() {
-  RenderBurgerAndSandwichesContent();
-  RenderPizzaContent();
-  RenderSaladContent();
+  renderBurgerAndSandwichesContent();
+  renderPizzaContent();
+  renderSaladContent();
+  renderBasket();
 }
 
-function RenderBurgerAndSandwichesContent() {
-  const container = document.getElementById("BurgerAndSandwichesContentId");
+function renderBurgerAndSandwichesContent() {
+  const container = document.getElementById("burgerAndSandwichesContentId");
   container.innerHTML = "";
-  let category = "burger";
+  let category = "burgers";
 
   for (let i = 0; i < menu.burgers.length; i++) {
     const burger = menu.burgers[i];
@@ -15,30 +16,57 @@ function RenderBurgerAndSandwichesContent() {
   }
 }
 
-function RenderPizzaContent(){
-  const container = document.getElementById("PizzaContentId");
+function renderPizzaContent() {
+  const container = document.getElementById("pizzaContentId");
   container.innerHTML = "";
-  let category = "pizza";
+  let category = "pizzas";
 
- for (let i = 0; i < menu.pizzas.length; i++) {
-  const pizza = menu.pizzas[i];
-  container.innerHTML += getFoodCardsTemplate(pizza, i, category);
- }
+  for (let i = 0; i < menu.pizzas.length; i++) {
+    const pizza = menu.pizzas[i];
+    container.innerHTML += getFoodCardsTemplate(pizza, i, category);
+  }
 }
 
-function RenderSaladContent() {
-  const container = document.getElementById("SaladContentId");
+function renderSaladContent() {
+  const container = document.getElementById("saladContentId");
   container.innerHTML = "";
-  let category = "salad";
-  
+  let category = "salads";
+
   for (let i = 0; i < menu.salads.length; i++) {
     const salad = menu.salads[i];
     container.innerHTML += getFoodCardsTemplate(salad, i, category);
   }
 }
 
-function addToBasket(i, category)
-{
-  console.log(i+" "+category);
-  
+function renderBasket() {
+  const container = document.getElementById("basketContentId");
+  container.innerHTML = "";
+
+  if (checkIfBasketEmpty() === true) {
+    container.innerHTML += getEmptyBasketTemplate();
+  }
+  else{
+    container.innerHTML += getFullBasketTemplate();
+    renderFullBasketCards();
+    renderSubtotalFoodPrices();
+    renderTotalFoodPrices();
+    renderButtonTotalFoodprices();
+  }
+}
+
+function addToBasket(i, category) {
+  menu[category][i].amount++;
+  renderBasket();
+}
+
+function checkIfBasketEmpty() {
+  let allItems = [];
+  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+
+  for (let index = 0; index < allItems.length; index++) {
+    if (allItems[index].amount !== 0) {
+      return false;
+    }
+  }
+  return true;
 }
