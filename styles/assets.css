@@ -74,7 +74,7 @@
   color: var(--grey_tone);
 }
 
-.food_card_button {
+.food_card_button_empty {
   width: 115px;
   height: 30px;
   border-radius: 16px;
@@ -84,6 +84,35 @@
   font-weight: 600;
   font-size: 16px;
   color: var(--grey_tone);
+  transition:
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.food_card_button_empty:hover,
+.food_card_button_not_empty:hover {
+  color: var(--primary_color);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    8px 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+.food_card_button_not_empty {
+  width: 74px;
+  height: 30px;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+  font-family: "Palanquin";
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary_color);
+  transition:
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .basket {

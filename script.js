@@ -12,7 +12,12 @@ function renderBurgerAndSandwichesContent() {
 
   for (let i = 0; i < menu.burgers.length; i++) {
     const burger = menu.burgers[i];
-    container.innerHTML += getFoodCardsTemplate(burger, i, category);
+    if(menu.burgers[i].amount !== 0){
+      container.innerHTML += getFoodCardsTemplateWithItems(burger, i, category)
+    }
+    else{
+      container.innerHTML += getFoodCardsTemplateNoItems(burger, i, category);
+    }
   }
 }
 
@@ -23,7 +28,12 @@ function renderPizzaContent() {
 
   for (let i = 0; i < menu.pizzas.length; i++) {
     const pizza = menu.pizzas[i];
-    container.innerHTML += getFoodCardsTemplate(pizza, i, category);
+    if(menu.pizzas[i].amount !== 0){
+      container.innerHTML += getFoodCardsTemplateWithItems(pizza, i, category)
+    }
+    else{
+      container.innerHTML += getFoodCardsTemplateNoItems(pizza, i, category);
+    }
   }
 }
 
@@ -34,7 +44,12 @@ function renderSaladContent() {
 
   for (let i = 0; i < menu.salads.length; i++) {
     const salad = menu.salads[i];
-    container.innerHTML += getFoodCardsTemplate(salad, i, category);
+    if(menu.salads[i].amount !== 0){
+      container.innerHTML += getFoodCardsTemplateWithItems(salad, i, category)
+    }
+    else{
+      container.innerHTML += getFoodCardsTemplateNoItems(salad, i, category);
+    }
   }
 }
 
@@ -57,6 +72,7 @@ function renderBasket() {
 function addToBasket(i, category) {
   menu[category][i].amount++;
   renderBasket();
+  reRenderFoodCardButtons();
 }
 
 function checkIfBasketEmpty() {
@@ -69,4 +85,10 @@ function checkIfBasketEmpty() {
     }
   }
   return true;
+}
+
+function reRenderFoodCardButtons(){
+  renderBurgerAndSandwichesContent();
+  renderPizzaContent();
+  renderSaladContent();
 }
