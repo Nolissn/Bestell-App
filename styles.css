@@ -144,14 +144,30 @@ footer {
 }
 
 .footer_copyright_icon_and_text_wrapper_div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 
 .footer_copyright_icon {
   height: 24px;
   width: 24px;
+}
+
+dialog {
+  height: 269px;
+  width: 415px;
+  background-color: var(--grey_tone);
+  border: none;
+  border-radius: 32px;
+  position: fixed;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+dialog[open] {
+  display: flex;
 }

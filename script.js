@@ -71,6 +71,7 @@ function renderBasket() {
 
 function addToBasket(i, category) {
   menu[category][i].amount++;
+  showBasket();
   renderBasket();
   reRenderFoodCardButtons();
 }
@@ -112,6 +113,42 @@ function checkIfBasketEmpty() {
     }
   }
   return true;
+}
+
+function buyNow() {
+  openDialog();
+  emptyBasket();
+  hideBasket();
+}
+
+function hideBasket() {
+  document.getElementById("basketContentId").classList.add("d_none");
+}
+
+function showBasket() {
+  document.getElementById("basketContentId").classList.remove("d_none");
+}
+
+function emptyBasket() {
+  let allItems = [];
+  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+
+  for (let index = 0; index < allItems.length; index++) {
+    allItems[index].amount = 0;
+  }
+  renderBasket();
+  reRenderFoodCardButtons();
+}
+
+function openDialog() {
+  const dialog = document.getElementById("dialogId");
+  dialog.showModal();
+  setTimeout(closeDialog, 5000);
+}
+
+function closeDialog() {
+  const dialog = document.getElementById("dialogId");
+  dialog.close();
 }
 
 function reRenderFoodCardButtons(){

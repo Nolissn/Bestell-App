@@ -239,7 +239,7 @@
   cursor: pointer;
 }
 
-.delete_food_card_icon_button:hover{
+.delete_food_card_icon_button:hover {
   background-color: white;
   border-radius: 8px;
   color: var(--primary_color);
@@ -265,7 +265,7 @@
   margin-right: 4px;
 }
 
-.multiple_basket_card_top_div{
+.multiple_basket_card_top_div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -347,4 +347,36 @@ hr {
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
+}
+
+.dialog_dismiss_icon_button {
+  width: 16px;
+  height: 16px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+.dialog_burger_truck_icon {
+  width: 80px;
+  height: 57px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.dialog_big_text {
+  font-family: Palanquin;
+  font-weight: 700;
+  font-size: 42px;
+  color: #fdeadc;
+  line-height: 1;
+}
+
+.dialog_smaller_text {
+  font-family: Palanquin;
+  font-weight: 700;
+  font-size: 29px;
+  color: #fdeadc;
+  line-height: 1;
 }
