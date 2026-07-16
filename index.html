@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,12 +39,12 @@
         <img
         class="header_icon"
         src="./assets/icons/SVG/header_icon.svg"
-        alt="Bestell App Icon"
+        alt="BurgerHouse logo"
       />
       <img
         class="header_burger_menu_icon"
         src="./assets/icons/SVG/burger_menu_icon.svg"
-        alt="Burger Menü Icon"
+        alt="Menu"
       />
       </div>
     </header>
@@ -52,12 +52,12 @@
       <img
         class="hero-image"
         src="./assets/images/PNG/hero_image.png"
-        alt="BurgerHouse Big Picture"
+        alt="Table set with burgers, fries, two pizzas, pasta and salad, seen from above"
       />
       <img
         class="burger_house_brand_icon"
         src="./assets/images/PNG/burger_hero_icon.png"
-        alt="BurgerHouse Brand Icon"
+        alt=""
       />
     </div>
     <section class="headline_section">
@@ -65,14 +65,14 @@
         <h1><span>Burger</span>House</h1>
         <img
           src="./assets/images/SVG/review.svg"
-          alt="Reviews Template Image"
+          alt="Customer rating"
         />
       </div>
       <p class="headline_section_p_tag">
         The best of Burgers, Pizza, and Greens, all in one great place.
       </p>
     </section>
-    <aside class="basket" id="basketContentId"></aside>
+    <aside class="basket" id="basketContentId" aria-label="Shopping basket"></aside>
     <main>
       <section class="burger_and_sandwiches_section">
         <header>
@@ -80,9 +80,9 @@
             <img
               class="burger_and_sandwiches_section_header_icon"
               src="./assets/icons/SVG/burger_and_sandwiches_section_header_icon.svg"
-              alt="Burger and sandwiches section header icon"
+              alt=""
             />
-            <p class="section_headline">Burger & Sandwiches</p>
+            <h2 class="section_headline">Burger & Sandwiches</h2>
           </div>
         </header>
         <div class="food_content_positioning_div">
@@ -95,11 +95,11 @@
             <img
               class="pizza_section_header_icon"
               src="./assets/icons/SVG/pizza_section_header_icon.svg"
-              alt="Pizza section header icon"
+              alt=""
             />
-            <p class="pizza_section_header_extra_text">
+            <h2 class="pizza_section_header_extra_text">
               <span class="section_headline">Pizza</span> (30cm)
-            </p>
+            </h2>
           </div>
         </header>
         <div class="food_content_positioning_div">
@@ -112,9 +112,9 @@
             <img
               class="salad_section_header_icon"
               src="./assets/icons/SVG/salad_section_header_icon.svg"
-              alt="Salad section header icon"
+              alt=""
             />
-            <p class="section_headline">Salad</p>
+            <h2 class="section_headline">Salad</h2>
           </div>
         </header>
         <div class="food_content_positioning_div">
@@ -127,19 +127,19 @@
         <img
           class="footer_copyright_icon"
           src="./assets/icons/SVG/copyright.svg"
-          alt="Copyright Icon"
+          alt="Copyright"
         />
         <p>2025 BurgerHouse</p>
       </div>
       <p>Imprint</p>
       <p>Cookie Preferences</p>
     </footer>
-    <dialog closedby="none" id="dialogId">
-      <button class="dialog_dismiss_icon_button" onclick="closeDialog()" aria-label="Close Icon Button">
+    <dialog closedby="none" id="dialogId" aria-labelledby="dialogTitle">
+      <button class="dialog_dismiss_icon_button" onclick="closeDialog()" aria-label="Close dialog">
         <img src="./assets/icons/SVG/close_icon_button.svg" alt="">
       </button>
-      <img class="dialog_burger_truck_icon" src="./assets/icons/SVG/burger_truck_icon.svg" alt="Burger Truck Icon">
-      <p class="dialog_big_text">Order confirmed!</p>
+      <img class="dialog_burger_truck_icon" src="./assets/icons/SVG/burger_truck_icon.svg" alt="">
+      <p class="dialog_big_text" id="dialogTitle">Order confirmed!</p>
       <p class="dialog_smaller_text">Your food is on the way!</p>
     </dialog>
   </body>
