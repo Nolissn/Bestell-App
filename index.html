@@ -35,7 +35,8 @@
   </head>
   <body onload="init()">
     <header>
-      <img
+      <div class="header_content_positioning">
+        <img
         class="header_icon"
         src="./assets/icons/SVG/header_icon.svg"
         alt="Bestell App Icon"
@@ -45,6 +46,7 @@
         src="./assets/icons/SVG/burger_menu_icon.svg"
         alt="Burger Menü Icon"
       />
+      </div>
     </header>
     <div class="hero_image_container">
       <img
@@ -74,38 +76,50 @@
     <main>
       <section class="burger_and_sandwiches_section">
         <header>
-          <img
-            class="burger_and_sandwiches_section_header_icon"
-            src="./assets/icons/SVG/burger_and_sandwiches_section_header_icon.svg"
-            alt="Burger and sandwiches section header icon"
-          />
-          <p class="section_headline">Burger & Sandwiches</p>
+          <div class="section_header_content_positioning">
+            <img
+              class="burger_and_sandwiches_section_header_icon"
+              src="./assets/icons/SVG/burger_and_sandwiches_section_header_icon.svg"
+              alt="Burger and sandwiches section header icon"
+            />
+            <p class="section_headline">Burger & Sandwiches</p>
+          </div>
         </header>
-        <div class="food_content" id="burgerAndSandwichesContentId"></div>
+        <div class="food_content_positioning_div">
+          <div class="food_content" id="burgerAndSandwichesContentId"></div>
+        </div>
       </section>
       <section class="pizza_section">
         <header>
-          <img
-            class="pizza_section_header_icon"
-            src="./assets/icons/SVG/pizza_section_header_icon.svg"
-            alt="Pizza section header icon"
-          />
-          <p class="pizza_section_header_extra_text">
-            <span class="section_headline">Pizza</span> (30cm)
-          </p>
+          <div class="section_header_content_positioning">
+            <img
+              class="pizza_section_header_icon"
+              src="./assets/icons/SVG/pizza_section_header_icon.svg"
+              alt="Pizza section header icon"
+            />
+            <p class="pizza_section_header_extra_text">
+              <span class="section_headline">Pizza</span> (30cm)
+            </p>
+          </div>
         </header>
-        <div class="food_content" id="pizzaContentId"></div>
+        <div class="food_content_positioning_div">
+          <div class="food_content" id="pizzaContentId"></div>
+        </div>
       </section>
       <section class="salad_section">
         <header>
-          <img
-            class="salad_section_header_icon"
-            src="./assets/icons/SVG/salad_section_header_icon.svg"
-            alt="Salad section header icon"
-          />
-          <p class="section_headline">Salad</p>
+          <div class="section_header_content_positioning">
+            <img
+              class="salad_section_header_icon"
+              src="./assets/icons/SVG/salad_section_header_icon.svg"
+              alt="Salad section header icon"
+            />
+            <p class="section_headline">Salad</p>
+          </div>
         </header>
-        <div class="food_content" id="saladContentId"></div>
+        <div class="food_content_positioning_div">
+          <div class="food_content" id="saladContentId"></div>
+        </div>
       </section>
     </main>
     <footer>
