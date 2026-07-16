@@ -5,8 +5,8 @@ function init() {
   renderBasket();
 }
 
-function renderFoodContent(category, currentid) {
-  const container = document.getElementById(currentid);
+function renderFoodContent(category, currentId) {
+  const container = document.getElementById(currentId);
   container.innerHTML = "";
 
   for (let i = 0; i < menu[category].length; i++) {
@@ -32,7 +32,7 @@ function renderBasket() {
     renderFullBasketCards();
     renderSubtotalFoodPrices();
     renderTotalFoodPrices();
-    renderButtonTotalFoodprices();
+    renderButtonTotalFoodPrices();
   }
 }
 

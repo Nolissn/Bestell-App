@@ -66,7 +66,7 @@ function getFullBasketTemplate() {
         <strong class="total_area_strong_font">Total</strong>
         <strong class="total_area_strong_font" id="totalFoodPrices"></strong>
       </div>
-      <button tabindex="0" onclick="buyNow()" class="basket_buy_button" id="buttonTotalFoodprices">Buy now ()</button>
+      <button tabindex="0" onclick="buyNow()" class="basket_buy_button" id="buttonTotalFoodPrices">Buy now ()</button>
     </div>
   `;
 }
