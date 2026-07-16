@@ -12,6 +12,8 @@ header {
   align-items: center;
   max-width: 1440px;
   width: 100%;
+  padding-left: 120px;
+  padding-right: 40px;
 }
 
 .hero_image_container {
@@ -187,4 +189,11 @@ dialog {
 
 dialog[open] {
   display: flex;
+}
+
+@media (min-width: 1440px) {
+  .header_content_positioning {
+    padding-left: max(0px, calc((1600px - 100vw) / 160 * 120));
+    padding-right: max(0px, calc((1600px - 100vw) / 160 * 40));
+  }
 }
