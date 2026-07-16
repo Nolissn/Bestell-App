@@ -1,9 +1,8 @@
 function renderFullBasketCards() {
-    box = document.getElementById("fullBasketContentId");
+    let box = document.getElementById("fullBasketContentId");
      box.innerHTML = "";
 
-  let allItems = [];
-  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+  let allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
 
   for (let index = 0; index < allItems.length; index++) {
     if(allItems[index].amount > 1){
@@ -17,11 +16,10 @@ function renderFullBasketCards() {
 }
 
 function renderSubtotalFoodPrices(){
-  pricespan = document.getElementById("subtotalFoodPricesId");
+  let pricespan = document.getElementById("subtotalFoodPricesId");
   pricespan.innerHTML ="";
   
-  let allItems = [];
-  allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+  let allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
   let singledishprice = 0;
   let multiplicationfactor = 1;
   let subtotalprice = 0;
@@ -37,8 +35,8 @@ function renderSubtotalFoodPrices(){
 }
 
 function renderTotalFoodPrices(){
-    subtotalpricespan = document.getElementById("subtotalFoodPricesId");
-    totalpricespan = document.getElementById("totalFoodPrices");
+    let subtotalpricespan = document.getElementById("subtotalFoodPricesId");
+    let totalpricespan = document.getElementById("totalFoodPrices");
 
     let subtotalprice = subtotalpricespan.innerText.replace("€", "").replace(",", ".");
     subtotalprice = parseFloat(subtotalprice);
@@ -47,7 +45,7 @@ function renderTotalFoodPrices(){
 }
 
 function renderButtonTotalFoodprices(){
-  button = document.getElementById("buttonTotalFoodprices");
-  totalpricestring = document.getElementById("totalFoodPrices").innerText;
+  let button = document.getElementById("buttonTotalFoodprices");
+  let totalpricestring = document.getElementById("totalFoodPrices").innerText;
   button.innerText = "Buy now (" + totalpricestring + ")";
 }
