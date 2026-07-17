@@ -18,7 +18,7 @@
   border-radius: 50%;
   border-width: 13px;
   border-style: solid;
-  border-color: #fdeadc;
+  border-color: var(--beige_color);
 }
 
 .food_card {
@@ -141,7 +141,6 @@
 .full_basket_content {
   min-height: 355px;
   max-height: 355px;
-  padding-left: 10px;
   padding-right: 10px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -182,6 +181,7 @@
   font-family: "Palanquin";
   line-height: 1.2;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .empty_basket_shopping_cart_icon {
@@ -243,8 +243,8 @@
 
 .delete_food_card_icon_button svg {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .delete_food_card_icon_button:hover {
@@ -376,8 +376,27 @@ hr {
 
 .dialog_dismiss_icon_button img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 16px;
+  height: 16px;
+}
+
+.full_basket_mobile_dismiss_button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  align-self: flex-end;
+  margin-top: 24px;
+  margin-right: 24px;
+  margin-bottom: -26px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.full_basket_mobile_dismiss_button_icon {
+  width: 16px;
+  height: 16px;
 }
 
 .dialog_burger_truck_icon {
@@ -391,14 +410,311 @@ hr {
   font-family: Palanquin;
   font-weight: 700;
   font-size: 42px;
-  color: #fdeadc;
+  color: var(--beige_color);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .dialog_smaller_text {
   font-family: Palanquin;
   font-weight: 700;
   font-size: 29px;
-  color: #fdeadc;
+  color: var(--beige_color);
   line-height: 1;
+  white-space: nowrap;
+}
+
+.nav_icon_button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.nav_icon_button:hover {
+  background-color: white;
+  border-radius: 8px;
+  color: var(--primary_color);
+}
+
+.shopping_cart_nav_icon_number_circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--beige_color);
+  border-radius: 16px;
+  position: absolute;
+  top: -2px;
+  left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping_cart_nav_icon_number_count {
+  font-family: Palanquin;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--primary_color);
+  transform: translateY(-1.3px);
+}
+
+.home_nav_icon {
+  width: 22px;
+  height: 24px;
+}
+
+.person_nav_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.takeout_dining_nav_icon {
+  width: 21px;
+  height: 24px;
+}
+
+.shopping_cart_nav_icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1300px) {
+  .food_card {
+    width: 100%;
+    max-width: 713px;
+    height: auto;
+    min-height: 141px;
+    padding-bottom: 10px;
+  }
+
+  .food_card_name {
+    line-height: 1.2;
+  }
+
+  .food_card_name,
+  .food_card_description {
+    overflow-wrap: break-word;
+  }
+
+  .food_card > div:not(.food_card_price_and_button_layout_div) {
+    min-width: 0;
+  }
+
+  .food_card_image {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .basket {
+    width: 380px;
+  }
+
+  .basked_card_general {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .header_icon {
+    width: 90px;
+    height: 37px;
+  }
+
+  .burger_house_brand_icon {
+    width: clamp(120px, calc(82.353px + 11.765vw), 200px);
+    height: clamp(120px, calc(82.353px + 11.765vw), 200px);
+  }
+
+  .header_burger_menu_icon {
+    display: none;
+  }
+
+  .basket {
+    width: 343px;
+    height: 662px;
+    border-radius: 25px 25px 0px 0px;
+    position: fixed;
+    top: calc(100vh - 78px - 662px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .basket_title_general {
+    font-family: "Palanquin";
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--beige_color);
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .basket_title_general.empty_basket_title {
+    margin-top: 22px;
+  }
+
+  .full_basket_mobile_dismiss_button {
+    display: block;
+  }
+
+  .calculation_area_div {
+    width: 300px;
+  }
+
+  .basket_buy_button {
+    width: 233px;
+    height: 53px;
+    background-color: var(--primary_color);
+    border-radius: 32px;
+    color: #fbfbfb;
+    font-family: Palanquin;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 33.5px;
+  }
+
+  hr {
+    width: 300px;
+    height: 3px;
+    border: none;
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  .subtotal_area {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .delivery_fee_area {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .total_area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .empty_basket_text {
+    color: var(--beige_color);
+    font-family: "Palanquin";
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .full_basket_content {
+    min-height: 355px;
+    max-height: 355px;
+    width: 300px;
+    padding-right: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .basked_card_general {
+    width: 280px;
+  }
+
+  .basked_card_general p {
+    padding-right: 20px;
+  }
+
+  .empty_basket_text:nth-of-type(2) {
+    margin-top: 64px;
+  }
+
+  .empty_basket_shopping_cart_icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 70px;
+  }
+
+  .dialog_big_text {
+    font-size: 32px;
+  }
+
+  .dialog_smaller_text {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .food_content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .food_card {
+    flex-direction: column;
+    width: 335px;
+    height: 270px;
+  }
+
+  .food_card_image {
+    width: 315px;
+    height: 86px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .food_card_name {
+    font-family: "Palanquin";
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .food_card_description {
+    font-family: "Palanquin";
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .food_card_price {
+    font-family: "Palanquin";
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .food_card_price_and_button_layout_div {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-right: 0;
+    margin-bottom: 16px;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -3,6 +3,7 @@ function init() {
   renderFoodContent("pizzas", "pizzaContentId");
   renderFoodContent("salads", "saladContentId");
   renderBasket();
+  window.innerWidth > 1000 ? showBasket() : hideBasket();
 }
 
 function renderFoodContent(category, currentId) {
@@ -34,11 +35,12 @@ function renderBasket() {
     renderTotalFoodPrices();
     renderButtonTotalFoodPrices();
   }
+  renderShoppingCartNavIcon();
 }
 
 function addToBasket(i, category) {
   menu[category][i].amount++;
-  showBasket();
+  window.innerWidth > 1000 ? showBasket() : null;
   renderBasket();
   reRenderFoodCardButtons();
 }
@@ -81,6 +83,7 @@ function checkIfBasketEmpty() {
 function buyNow() {
   openDialog();
   emptyBasket();
+  renderShoppingCartNavIcon();
   hideBasket();
 }
 
@@ -117,4 +120,26 @@ function reRenderFoodCardButtons(){
   renderFoodContent("burgers", "burgerAndSandwichesContentId");
   renderFoodContent("pizzas", "pizzaContentId");
   renderFoodContent("salads", "saladContentId");
+}
+
+function renderShoppingCartNavIcon() {
+  const button = document.getElementById("navBasketButtonId");
+  const totalAmount = countTotalAmountOfSelectedItems();
+  button.innerHTML = getShoppingCartNavIconTemplate(totalAmount);
+  
+}
+
+function countTotalAmountOfSelectedItems() {
+  let allItems = [...menu.burgers, ...menu.pizzas, ...menu.salads];
+  let totalAmount = 0;
+
+  for (let index = 0; index < allItems.length; index++) {
+    totalAmount += allItems[index].amount;
+  }
+
+  return totalAmount;
+}
+
+function toggleBasketVisibility() {
+  document.getElementById("basketContentId").classList.toggle("d_none");
 }
