@@ -63,6 +63,7 @@ h1 span {
   font-weight: 700;
   font-size: 24px;
   color: var(--grey_tone);
+  padding: 0 10px;
 }
 
 main section header {
@@ -284,6 +285,15 @@ dialog[open] {
   header {
     height: 79px;
   }
+
+  .salad_section header {
+    margin-top: 52px;
+    margin-bottom: 0px;
+  }
+
+  footer {
+    margin-top: 52px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -388,5 +398,13 @@ dialog[open] {
 }
 
 @media (max-width: 390px) {
+  .hero-image {
+    width: calc(100% - 32px);
+    height: clamp(272px, 105.7143vw - 66.2857px, 346px);
+  }
 
+  dialog {
+    width: 288px;
+    height: 250px;
+  }
 }

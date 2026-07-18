@@ -523,7 +523,6 @@ hr {
 }
 
 @media (max-width: 1000px) {
-
   .header_icon {
     width: 90px;
     height: 37px;
@@ -656,7 +655,6 @@ hr {
   .dialog_smaller_text {
     font-size: 22px;
   }
-
 }
 
 @media (max-width: 800px) {
@@ -719,6 +717,65 @@ hr {
   }
 }
 
-@media(max-width: 730px){
-  
+@media (max-width: 730px) {
+  .food_card {
+    flex-direction: column;
+    width: clamp(270px, 92.8571vw - 27.1429px, 335px);
+    padding-bottom: 0px;
+  }
+
+  .food_card_image {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 390px) {
+  .dialog_big_text {
+    font-size: 26px;
+  }
+
+  .dialog_smaller_text {
+    font-size: 18px;
+  }
+
+  .basket {
+    width: calc(100vw - 16px);
+    height: min(662px, calc(100vh - 86px));
+    height: min(662px, calc(100dvh - 86px));
+    top: auto;
+    bottom: 78px;
+  }
+
+  .full_basket_content {
+    flex: 1 1 auto;
+    width: calc(100% - 24px);
+    min-height: 100px;
+    max-height: none;
+  }
+
+  .basked_card_general {
+    width: 100%;
+  }
+
+  .basked_card_general p {
+    max-width: none;
+    margin-left: 16px;
+    padding-right: 16px;
+  }
+
+  .calculation_area_div {
+    width: calc(100% - 24px);
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .basket_buy_button {
+    display: block;
+    width: 100%;
+    max-width: 233px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
