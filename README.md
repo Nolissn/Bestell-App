@@ -27,9 +27,11 @@ Burger House lets you browse a menu of burgers, pizzas and salads, add dishes to
 
 ## Built With
 
-<img src="./assets/readme_pictures/html.svg" alt="HTML" width="48" />
-<img src="./assets/readme_pictures/css.svg" alt="CSS" width="48" />
-<img src="./assets/readme_pictures/javascript.svg" alt="JavaScript" width="48" />
+<p>
+  <img src="./assets/readme_pictures/html.svg" alt="HTML" width="48" />&nbsp;
+  <img src="./assets/readme_pictures/css.svg" alt="CSS" width="48" />&nbsp;
+  <img src="./assets/readme_pictures/javascript.svg" alt="JavaScript" width="48" />
+</p>
 
 ---
 
