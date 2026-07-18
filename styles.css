@@ -6,7 +6,7 @@ header {
   height: 128px;
 }
 
-.header_content_positioning{
+.header_content_positioning {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +103,7 @@ main section header {
   width: 100%;
 }
 
-.food_content_positioning_div{
+.food_content_positioning_div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -235,8 +235,7 @@ dialog[open] {
 }
 
 @media (max-width: 1000px) {
-
-  .header_content_positioning{
+  .header_content_positioning {
     padding-left: 16px;
   }
 
@@ -278,10 +277,13 @@ dialog[open] {
   }
 
   dialog {
-  height: 255px;
-  width: 340px;
-}
+    height: 255px;
+    width: 340px;
+  }
 
+  header {
+    height: 79px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -289,4 +291,102 @@ dialog[open] {
     padding-right: 14px;
     padding-left: 14px;
   }
+
+  .headline_section_h1_and_review_div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 97px;
+  }
+
+  h1 {
+    font-family: "Palanquin Dark";
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 8px;
+  }
+
+  h1 span {
+    color: var(--primary_color);
+  }
+
+  .headline_section_p_tag {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .headline_section {
+    margin-top: 75px;
+  }
+
+  .section_headline {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  .burger_and_sandwiches_section_header_icon {
+    height: 60px;
+    width: 58px;
+    margin-right: 0px;
+    margin-bottom: -14px;
+  }
+
+  .section_header_content_positioning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .burger_and_sandwiches_section .section_header_content_positioning {
+    align-items: center;
+  }
+
+  .mobile_hiding_class {
+    display: none;
+  }
+
+  .pizza_section_header_icon {
+    height: 60px;
+    width: 53px;
+    margin-right: 0px;
+    margin-bottom: -20px;
+  }
+
+  .pizza_section_header_extra_text {
+    font-family: Palanquin;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 36px;
+  }
+
+  .salad_section_header_icon {
+    width: 59px;
+    height: 60px;
+    margin-right: 0px;
+    margin-bottom: -16px;
+  }
+
+  .burger_and_sandwiches_section header {
+    margin-top: 86px;
+  }
+}
+
+@media (max-width: 730px) {
+  footer {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding-top: 0px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+
 }
